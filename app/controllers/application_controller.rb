@@ -12,12 +12,6 @@ class ApplicationController < ActionController::Base
 
   def enhanced_cart
     @enhanced_cart ||= Product.where(id: cart.keys).map {|product| { product:product, quantity: cart[product.id.to_s] } }
-    if @enhanced_cart.size == 0
-      flash[:notice] = "Your cart is empty! Click to keep shoppin :)"
-      @enhanced_cart
-    else
-      @enhanced_cart
-    end
   end
   helper_method :enhanced_cart
 
