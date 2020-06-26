@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def enhanced_cart
     @enhanced_cart ||= Product.where(id: cart.keys).map {|product| { product:product, quantity: cart[product.id.to_s] } }
     if @enhanced_cart.size == 0
-      flash[:notice] = "Your cart is empty! Click to keep shoppin :)"
+      flash[:notice] = "Your cart is empty! Return to the home page to keep shoppin :)"
       @enhanced_cart
     else
       @enhanced_cart
@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize
-    redirect_to '/login' unless current_user
+    redirect_to '/session/new' unless current_user
   end 
 
 end
