@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   describe 'Validations' do
     # validation tests/examples here
-    before(:all) do
+    before(:each) do
       @product = Product.new({name: "Massage Chair", price: 1500, quantity: 1})
       @category = Category.new()
       @product.category = @category
@@ -25,9 +25,9 @@ RSpec.describe Product, type: :model do
     end
 
     it "product is not valid with nil price" do
-      @product.price = nil
+      @product.price_cents = nil
       expect(@product).to_not be_valid
-      expect(@product.errors.full_messages).to include("Quantity can't be blank")
+      expect(@product.errors.full_messages).to include("Price can't be blank")
     end
 
     it "product is not valid with nil category" do
