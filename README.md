@@ -6,6 +6,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Setup
 
+![Home Page](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/home_page.png?raw=true)
+![Register](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/register_page.png?raw=true)
+![Payment](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/pay_for_order.png?raw=true)
+![Order](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/order_page.png?raw=true)
+
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
 3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
