@@ -44,4 +44,11 @@ class ApplicationController < ActionController::Base
     redirect_to '/session/new' unless current_user
   end 
 
+  def sold_out?(quantity)
+    if quantity == 0
+      true
+    end
+  end
+  helper_method :sold_out?
+
 end
