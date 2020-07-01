@@ -21,5 +21,6 @@ RSpec.feature "UserLogins", type: :feature, js: true do
     # save_screenshot
 
     expect(page).to have_text "lucas@mail.com"
+    expect(page).to have_text "Logout"
   end
 end
