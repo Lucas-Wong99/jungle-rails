@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    @message = nil
   end
 
   def create
@@ -8,7 +9,8 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to :root
     else
-      redirect_to '/sessions/new'
+      @message = 'Sorry! Incorrect email or password.'
+      render '/sessions/new'
     end
   end
 
