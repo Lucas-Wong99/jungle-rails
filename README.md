@@ -4,8 +4,6 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 # Screenshots
 
-## Setup
-
 ![Home Page](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/home_page.png?raw=true)
 ![Register](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/register_page.png?raw=true)
 ![Payment](https://github.com/Lucas-Wong99/jungle-rails/blob/master/docs/pay_for_order.png?raw=true)
